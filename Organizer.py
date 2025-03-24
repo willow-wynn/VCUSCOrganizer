@@ -11,9 +11,9 @@ load_dotenv()
 google_api_key = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=google_api_key)
 model = genai.GenerativeModel(model_name="gemini-2.0-flash-thinking-exp-01-21")
-PDF_DIR = "C:/Users/brayd/Downloads/every-vc-bill/pdfs"
+PDF_DIR = "/Downloads/every-vc-bill/pdfs"
 PROGRESS_FILE = "bill_processing_progress.pkl"
-JSON_DIR = "C:/Users/brayd/Downloads/every-vc-bill/json_outputs"
+JSON_DIR = "/Downloads/every-vc-bill/json_outputs"
 os.makedirs(JSON_DIR, exist_ok=True)
 
 def save_progress(processed_files):
